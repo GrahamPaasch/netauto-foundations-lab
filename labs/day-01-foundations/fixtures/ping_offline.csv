@@ -1,0 +1,5 @@
+hostname,mgmt_ip,reachable
+r1,10.0.0.11,yes
+sw1,10.0.0.12,yes
+j1,10.0.0.21,yes
+jump,10.0.0.5,yes

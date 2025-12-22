@@ -1,0 +1,6 @@
+[
+  {"hostname": "r1", "role": "edge-router", "mgmt_ip": "10.0.0.11", "vendor": "ios"},
+  {"hostname": "sw1", "role": "dist-switch", "mgmt_ip": "10.0.0.12", "vendor": "eos"},
+  {"hostname": "j1", "role": "core-switch", "mgmt_ip": "10.0.0.21", "vendor": "junos"},
+  {"hostname": "jump", "role": "jump-host", "mgmt_ip": "10.0.0.5", "vendor": "linux"}
+]

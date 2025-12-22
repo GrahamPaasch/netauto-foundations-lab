@@ -1,0 +1,10 @@
+{
+  "device": "r1",
+  "metrics": {
+    "sysUpTime": "123456",
+    "ifInOctets": {
+      "GigabitEthernet0/1": 1203456,
+      "GigabitEthernet0/2": 452311
+    }
+  }
+}

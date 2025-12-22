@@ -1,0 +1,4 @@
+Aug 10 10:01:12 r1 %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to up
+Aug 10 10:01:15 r1 %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to up
+Aug 10 10:02:44 sw1 %STP-5-ROOTCHANGE: Root changed on VLAN0001
+Aug 10 10:05:02 j1 RT_FLOW: RT_FLOW_SESSION_CREATE: session created 10.0.0.11/54023->10.0.0.12/22

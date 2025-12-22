@@ -1,0 +1,23 @@
+---
+- name: Basic show commands
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Control node ping
+      ansible.builtin.ping:
+
+    - name: IOS show version
+      cisco.ios.ios_command:
+        commands: ["show version"]
+      when: ansible_network_os == "ios"
+
+    - name: Junos show version
+      junipernetworks.junos.junos_command:
+        commands: ["show version"]
+      when: ansible_network_os == "junos"
+
+    - name: EOS show version
+      arista.eos.eos_command:
+        commands: ["show version"]
+      when: ansible_network_os == "eos"

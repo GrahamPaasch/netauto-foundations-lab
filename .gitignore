@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# local outputs
+labs/**/outputs/
+
+# optional modules (if not tracked as submodules)
+modules/
