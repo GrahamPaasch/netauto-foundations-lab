@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TOPOLOGY = ROOT / "docs" / "lab-topology.md"
-OUTPUT = ROOT / "labs" / "day-01-foundations" / "baselines" / "devices.json"
+OUTPUT = ROOT / "labs" / "day-01-foundations" / "data" / "devices.json"
 
 
 def parse_table(markdown):
@@ -36,6 +36,7 @@ def main():
                 "vendor": row.get("platform"),
             })
 
+    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(devices, indent=2))
     print(f"Wrote {OUTPUT}")
 

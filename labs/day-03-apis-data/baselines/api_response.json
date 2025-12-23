@@ -1,7 +1,0 @@
-{
-  "device": "r1",
-  "interfaces": [
-    {"name": "GigabitEthernet0/1", "admin": "up", "oper": "up", "ip": "10.0.0.11/24"},
-    {"name": "GigabitEthernet0/2", "admin": "down", "oper": "down", "ip": null}
-  ]
-}

@@ -3,7 +3,7 @@
 A first-principles network automation course that uses the local GNS3 lab to practice real workflows.
 
 What you'll learn
-- Build inventory and connectivity baselines.
+- Build inventory and connectivity from the live lab.
 - Collect and normalize data with SNMP, syslog, and APIs.
 - Automate multi-vendor changes with Ansible.
 - Express intent and review plan/apply evidence.
@@ -24,7 +24,7 @@ Quick start
 
 Lab integration
 - `docs/lab-topology.md` is the source of truth.
-- After updating topology, run `python3 scripts/generate_baselines.py`.
+- After updating topology, run `python3 scripts/generate_inventory.py`.
 - Optional lab modules live under `modules/` (use `./scripts/sync_modules.sh`).
 
 Instructor and evidence

@@ -3,20 +3,15 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASELINE = ROOT / "baselines" / "api_response.json"
 OUTPUTS = ROOT / "outputs"
 OUTPUTS.mkdir(exist_ok=True)
-
-
-def load_baseline():
-    return json.loads(BASELINE.read_text())
 
 
 def load_live(url):
     try:
         import requests
     except ImportError:
-        print("requests is not installed. Run baseline mode or install requirements.")
+        print("requests is not installed. Install requirements first.")
         return None
     resp = requests.get(url, timeout=5)
     resp.raise_for_status()
@@ -37,10 +32,10 @@ def normalize(data):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--url", help="optional live API endpoint")
+    parser.add_argument("--url", required=True, help="live API endpoint")
     args = parser.parse_args()
 
-    raw = load_live(args.url) if args.url else load_baseline()
+    raw = load_live(args.url)
     if raw is None:
         raise SystemExit(1)
     normalized = normalize(raw)

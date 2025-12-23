@@ -1,13 +1,12 @@
 # Day 3 - APIs and Data Modeling
 
 Outcomes
-- Collect data from an API or baseline snapshot.
+- Collect data from a live API endpoint.
 - Normalize fields into a common schema.
 
 Lab 1 - Normalize API data
-1. Run baseline: `python3 examples/normalize.py`.
+1. Run: `python3 examples/normalize.py --url http://<host>/api`.
 2. Review `outputs/api_normalized.json`.
-3. If you have a live endpoint, run: `python3 examples/normalize.py --url http://<host>/api`.
 
 Evidence
 - `outputs/api_normalized.json`

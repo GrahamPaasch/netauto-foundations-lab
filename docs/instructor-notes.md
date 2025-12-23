@@ -2,7 +2,7 @@
 
 Goals
 - Keep the labs short and focused.
-- Show baseline first, then live.
+- Start with the live lab from the first demo.
 - Emphasize evidence and change safety.
 
 Daily flow

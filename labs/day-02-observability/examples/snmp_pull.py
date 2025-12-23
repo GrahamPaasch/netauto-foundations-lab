@@ -3,19 +3,18 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BASELINE_PATH = ROOT / "baselines" / "snmp_sample.json"
 OUTPUTS = ROOT / "outputs"
 OUTPUTS.mkdir(exist_ok=True)
 
-
-def baseline():
-    data = json.loads(BASELINE_PATH.read_text())
-    out_path = OUTPUTS / "snmp_summary.json"
-    out_path.write_text(json.dumps(data, indent=2))
-    print(f"Wrote {out_path}")
+DEFAULT_INVENTORY = ROOT.parent / "day-01-foundations" / "data" / "devices.json"
 
 
-def live(target, community):
+def load_inventory(path):
+    data = json.loads(Path(path).read_text())
+    return [entry["mgmt_ip"] for entry in data if entry.get("mgmt_ip")]
+
+
+def live(targets, community):
     try:
         from pysnmp.hlapi import (
             CommunityData,
@@ -27,39 +26,44 @@ def live(target, community):
             getCmd,
         )
     except ImportError:
-        print("pysnmp is not installed. Run this in baseline mode or install requirements.")
+        print("pysnmp is not installed. Install requirements first.")
         return
 
-    iterator = getCmd(
-        SnmpEngine(),
-        CommunityData(community),
-        UdpTransportTarget((target, 161), timeout=2, retries=1),
-        ContextData(),
-        ObjectType(ObjectIdentity("1.3.6.1.2.1.1.3.0")),  # sysUpTime.0
-    )
-    error_indication, error_status, error_index, var_binds = next(iterator)
-    if error_indication:
-        print(f"SNMP error: {error_indication}")
-        return
-    if error_status:
-        print(f"SNMP error: {error_status.prettyPrint()}")
-        return
+    results = []
+    for target in targets:
+        iterator = getCmd(
+            SnmpEngine(),
+            CommunityData(community),
+            UdpTransportTarget((target, 161), timeout=2, retries=1),
+            ContextData(),
+            ObjectType(ObjectIdentity("1.3.6.1.2.1.1.3.0")),  # sysUpTime.0
+        )
+        error_indication, error_status, error_index, var_binds = next(iterator)
+        if error_indication:
+            results.append({"device": target, "error": str(error_indication)})
+            continue
+        if error_status:
+            results.append({"device": target, "error": error_status.prettyPrint()})
+            continue
+        results.append({"device": target, "metrics": {"sysUpTime": str(var_binds[0][1])}})
 
-    result = {"device": target, "metrics": {"sysUpTime": str(var_binds[0][1])}}
     out_path = OUTPUTS / "snmp_summary.json"
-    out_path.write_text(json.dumps(result, indent=2))
+    out_path.write_text(json.dumps(results, indent=2))
     print(f"Wrote {out_path}")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--baseline", action="store_true")
-    parser.add_argument("--offline", action="store_true", help=argparse.SUPPRESS)
-    parser.add_argument("--target", default="10.0.0.11")
+    parser.add_argument("--inventory", default=str(DEFAULT_INVENTORY))
+    parser.add_argument("--target", action="append")
     parser.add_argument("--community", default="public")
     args = parser.parse_args()
 
-    if args.baseline or args.offline:
-        baseline()
-    else:
-        live(args.target, args.community)
+    targets = args.target or []
+    if not targets and Path(args.inventory).exists():
+        targets = load_inventory(args.inventory)
+
+    if not targets:
+        raise SystemExit("No targets provided and inventory not found.")
+
+    live(targets, args.community)
