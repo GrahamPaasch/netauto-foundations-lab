@@ -4,6 +4,7 @@ Goals
 - Keep the labs short and focused.
 - Start with the live lab from the first demo.
 - Emphasize evidence and change safety.
+- No slide-only fallback. If the lab is down, pause and restore access.
 
 Daily flow
 - 15 min concept

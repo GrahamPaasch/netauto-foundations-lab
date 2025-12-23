@@ -2,6 +2,9 @@
 
 A first-principles network automation course that uses the local GNS3 lab to practice real workflows.
 
+Live lab required
+- This course has no offline or slide-only path. If the lab is down, stop and restore access first.
+
 What you'll learn
 - Build inventory and connectivity from the live lab.
 - Collect and normalize data with SNMP, syslog, and APIs.

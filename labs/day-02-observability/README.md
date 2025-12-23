@@ -9,6 +9,10 @@ Lab 1 - SNMP pull
 2. Review `outputs/snmp_summary.json`.
 3. If needed, target a specific device: `python3 examples/snmp_pull.py --target 10.0.0.11`.
 
+Live traffic check (required)
+- Confirm SNMP or syslog packets are visible on the collector or jump host.
+- Example: `sudo tcpdump -i <iface> port 161 or port 514`
+
 Lab 2 - Syslog parse
 1. Export logs from your syslog server to a file (or use `/var/log/syslog` if that is your lab collector).
 2. Run `python3 examples/syslog_parse.py --path /path/to/syslog.log`.
