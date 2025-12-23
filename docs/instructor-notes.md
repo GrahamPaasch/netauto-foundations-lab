@@ -5,6 +5,7 @@ Goals
 - Start with the live lab from the first demo.
 - Emphasize evidence and change safety.
 - No slide-only fallback. If the lab is down, pause and restore access.
+- Show a live packet capture early to anchor the workflow.
 
 Daily flow
 - 15 min concept

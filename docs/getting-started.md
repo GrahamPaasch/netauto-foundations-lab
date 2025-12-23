@@ -4,10 +4,12 @@ Prereqs
 - Python 3.10+
 - Git
 - GNS3 access and a jump host (if your lab requires it)
+- tcpdump (or Wireshark/tshark for analysis)
 
 Live lab required
 - This course is live-lab only. If you cannot reach devices or capture traffic, pause and fix the lab.
 - Minimum checks: ping one device and confirm you can see SNMP or syslog traffic on the collector.
+  - Example: `sudo tcpdump -i <iface> port 161 or port 514`
 
 Setup
 1. From the repo root, run `./scripts/bootstrap.sh`.

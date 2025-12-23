@@ -10,6 +10,8 @@ Day 1
 Day 2
 - snmp_summary.json
 - syslog_parsed.json
+- obs_traffic.pcap
+- obs_traffic_summary.txt
 
 Day 3
 - api_normalized.json

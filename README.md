@@ -8,6 +8,7 @@ Live lab required
 What you'll learn
 - Build inventory and connectivity from the live lab.
 - Collect and normalize data with SNMP, syslog, and APIs.
+- Capture and analyze live traffic to verify behavior.
 - Automate multi-vendor changes with Ansible.
 - Express intent and review plan/apply evidence.
 
