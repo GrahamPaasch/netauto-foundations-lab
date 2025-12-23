@@ -3,13 +3,13 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OFFLINE_PATH = ROOT / "fixtures" / "snmp_sample.json"
+BASELINE_PATH = ROOT / "baselines" / "snmp_sample.json"
 OUTPUTS = ROOT / "outputs"
 OUTPUTS.mkdir(exist_ok=True)
 
 
-def offline():
-    data = json.loads(OFFLINE_PATH.read_text())
+def baseline():
+    data = json.loads(BASELINE_PATH.read_text())
     out_path = OUTPUTS / "snmp_summary.json"
     out_path.write_text(json.dumps(data, indent=2))
     print(f"Wrote {out_path}")
@@ -27,7 +27,7 @@ def live(target, community):
             getCmd,
         )
     except ImportError:
-        print("pysnmp is not installed. Run this in offline mode or install requirements.")
+        print("pysnmp is not installed. Run this in baseline mode or install requirements.")
         return
 
     iterator = getCmd(
@@ -53,12 +53,13 @@ def live(target, community):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--offline", action="store_true")
+    parser.add_argument("--baseline", action="store_true")
+    parser.add_argument("--offline", action="store_true", help=argparse.SUPPRESS)
     parser.add_argument("--target", default="10.0.0.11")
     parser.add_argument("--community", default="public")
     args = parser.parse_args()
 
-    if args.offline:
-        offline()
+    if args.baseline or args.offline:
+        baseline()
     else:
         live(args.target, args.community)

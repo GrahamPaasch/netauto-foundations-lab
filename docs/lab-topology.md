@@ -14,4 +14,4 @@ Fill in the table below for quick reference.
 | sw1 | eos | 10.0.0.12 | user | pass | dist |
 | j1 | junos | 10.0.0.21 | user | pass | core |
 
-After updating this table, run `python3 scripts/generate_fixtures.py` to refresh Day 1 fixtures.
+After updating this table, run `python3 scripts/generate_baselines.py` to refresh Day 1 baselines.

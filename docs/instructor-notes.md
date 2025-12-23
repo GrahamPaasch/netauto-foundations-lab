@@ -2,7 +2,7 @@
 
 Goals
 - Keep the labs short and focused.
-- Show offline first, then live.
+- Show baseline first, then live.
 - Emphasize evidence and change safety.
 
 Daily flow

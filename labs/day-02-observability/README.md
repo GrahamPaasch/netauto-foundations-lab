@@ -5,7 +5,7 @@ Outcomes
 - Parse syslog into structured records.
 
 Lab 1 - SNMP pull
-1. Run offline mode: `python3 examples/snmp_pull.py --offline`.
+1. Run baseline mode: `python3 examples/snmp_pull.py --baseline`.
 2. Review `outputs/snmp_summary.json`.
 3. Run live mode with your device IP and community.
 
@@ -19,7 +19,7 @@ Evidence
 - `outputs/syslog_parsed.json`
 
 Student checklist
-- SNMP summary created (offline or live).
+- SNMP summary created (baseline or live).
 - Syslog parsed into structured JSON.
 - One new pattern added and verified.
 - One alert idea written down.

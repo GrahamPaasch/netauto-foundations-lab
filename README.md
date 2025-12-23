@@ -24,7 +24,7 @@ Quick start
 
 Lab integration
 - `docs/lab-topology.md` is the source of truth.
-- After updating topology, run `python3 scripts/generate_fixtures.py`.
+- After updating topology, run `python3 scripts/generate_baselines.py`.
 - Optional lab modules live under `modules/` (use `./scripts/sync_modules.sh`).
 
 Instructor and evidence

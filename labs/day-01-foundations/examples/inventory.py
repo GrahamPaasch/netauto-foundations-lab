@@ -3,11 +3,11 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-FIXTURES = ROOT / "fixtures" / "devices.json"
+BASELINES = ROOT / "baselines" / "devices.json"
 OUTPUTS = ROOT / "outputs"
 OUTPUTS.mkdir(exist_ok=True)
 
-with FIXTURES.open() as f:
+with BASELINES.open() as f:
     devices = json.load(f)
 
 csv_path = OUTPUTS / "inventory.csv"

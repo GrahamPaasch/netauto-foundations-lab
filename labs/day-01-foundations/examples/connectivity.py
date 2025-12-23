@@ -5,8 +5,8 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DEVICES = ROOT / "fixtures" / "devices.json"
-OFFLINE = ROOT / "fixtures" / "ping_offline.csv"
+DEVICES = ROOT / "baselines" / "devices.json"
+BASELINE = ROOT / "baselines" / "ping_baseline.csv"
 OUTPUTS = ROOT / "outputs"
 OUTPUTS.mkdir(exist_ok=True)
 
@@ -21,8 +21,8 @@ def ping(ip):
     return result.returncode == 0
 
 
-def offline_results():
-    with OFFLINE.open() as f:
+def baseline_results():
+    with BASELINE.open() as f:
         return list(csv.DictReader(f))
 
 
@@ -50,10 +50,11 @@ def write_report(rows, out_path):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--offline", action="store_true", help="use offline fixture")
+    parser.add_argument("--baseline", action="store_true", help="use baseline snapshot")
+    parser.add_argument("--offline", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
 
-    rows = offline_results() if args.offline else live_results()
+    rows = baseline_results() if (args.baseline or args.offline) else live_results()
     out_path = OUTPUTS / "connectivity.csv"
     write_report(rows, out_path)
     print(f"Wrote {out_path}")

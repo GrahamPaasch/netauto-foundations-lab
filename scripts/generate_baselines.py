@@ -4,7 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 TOPOLOGY = ROOT / "docs" / "lab-topology.md"
-OUTPUT = ROOT / "labs" / "day-01-foundations" / "fixtures" / "devices.json"
+OUTPUT = ROOT / "labs" / "day-01-foundations" / "baselines" / "devices.json"
 
 
 def parse_table(markdown):

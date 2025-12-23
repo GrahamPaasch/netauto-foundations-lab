@@ -3,7 +3,7 @@ import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-LOG_PATH = ROOT / "fixtures" / "syslog_sample.log"
+LOG_PATH = ROOT / "baselines" / "syslog_sample.log"
 OUTPUTS = ROOT / "outputs"
 OUTPUTS.mkdir(exist_ok=True)
 

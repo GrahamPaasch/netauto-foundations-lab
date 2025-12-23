@@ -11,7 +11,7 @@ Day 0 - Setup
 
 Day 1 - Foundations and connectivity
 - Build an inventory dataset
-- Validate reachability with offline fixtures and live tests
+- Validate reachability with baseline snapshots and live tests
 - Deliverable: inventory CSV and connectivity report
 
 Day 2 - Observability basics (SNMP and syslog)
