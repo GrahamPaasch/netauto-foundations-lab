@@ -18,3 +18,9 @@ Lab 2 - Deeper practice (optional)
 
 Evidence
 - Playbook output and any diffs collected in check mode.
+
+Student checklist
+- Inventory updated with real IPs and creds.
+- Playbook completed without fatal errors.
+- Output saved or pasted into notes.
+- One improvement idea captured.

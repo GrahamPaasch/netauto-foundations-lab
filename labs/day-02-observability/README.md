@@ -17,3 +17,9 @@ Lab 2 - Syslog parse
 Evidence
 - `outputs/snmp_summary.json`
 - `outputs/syslog_parsed.json`
+
+Student checklist
+- SNMP summary created (offline or live).
+- Syslog parsed into structured JSON.
+- One new pattern added and verified.
+- One alert idea written down.

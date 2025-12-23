@@ -17,3 +17,8 @@ Stretch goals
 Evidence
 - Plan request and plan response.
 - Artifacts folder with rendered configs and evidence.
+
+Student checklist
+- Plan submitted and status confirmed.
+- Artifacts reviewed for correctness.
+- Recap written with outcomes and risks.

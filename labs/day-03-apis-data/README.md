@@ -11,3 +11,8 @@ Lab 1 - Normalize API data
 
 Evidence
 - `outputs/api_normalized.json`
+
+Student checklist
+- Normalization ran and output saved.
+- Optional live API call attempted (if available).
+- Noted one data quality issue to revisit.

@@ -1,26 +1,39 @@
 # Netauto Foundations Lab
 
-A clean, beginner-friendly course that builds from first principles and uses the local GNS3 lab to practice real automation workflows.
+A first-principles network automation course that uses the local GNS3 lab to practice real workflows.
 
-What this is
-- A day-by-day course with clear outcomes and hands-on labs.
-- Designed for this teaching lab system (GNS3 + jump host + multi-vendor devices).
-- Uses local modules for capstone and deeper practice when available.
+What you'll learn
+- Build inventory and connectivity baselines.
+- Collect and normalize data with SNMP, syslog, and APIs.
+- Automate multi-vendor changes with Ansible.
+- Express intent and review plan/apply evidence.
+
+Course map
+- Day 0: setup and lab access
+- Day 1: foundations and connectivity
+- Day 2: observability basics
+- Day 3: APIs and data modeling
+- Day 4: configuration automation
+- Day 5: intent capstone
 
 Quick start
-1. Read `docs/getting-started.md`.
-2. Run `./scripts/bootstrap.sh`.
-3. Run `./scripts/verify.sh`.
-4. Open `docs/syllabus.md` and follow Day 1.
+1. Run `./scripts/bootstrap.sh`.
+2. Run `./scripts/verify.sh`.
+3. Read `docs/getting-started.md`.
+4. Start Day 1 in `labs/day-01-foundations/README.md`.
 
 Lab integration
-- Optional lab modules live under `modules/`.
-- Run `./scripts/sync_modules.sh` to clone or link them.
-- Topology and access details are in `docs/lab-topology.md`.
+- `docs/lab-topology.md` is the source of truth.
+- After updating topology, run `python3 scripts/generate_fixtures.py`.
+- Optional lab modules live under `modules/` (use `./scripts/sync_modules.sh`).
+
+Instructor and evidence
+- Instructor flow: `docs/instructor-quickstart.md`.
+- Evidence checklist: `docs/assessment.md`.
 
 Repo layout
-- `docs/` course docs, setup, and instructor notes.
+- `docs/` course docs and instructor notes.
 - `labs/` day-by-day lab guides.
 - `modules/` optional lab modules (cloned or symlinked).
-- `scripts/` bootstrap and helper scripts.
+- `scripts/` bootstrap and helpers.
 - `assets/` diagrams and supporting files.
