@@ -1,0 +1,28 @@
+lab:
+  name: gns3-lab
+  mgmt_network: 10.0.0.0/24
+devices:
+  - hostname: r1
+    platform: ios
+    mgmt_ip: 10.0.0.11
+    username: user
+    password: pass
+    role: edge
+  - hostname: sw1
+    platform: eos
+    mgmt_ip: 10.0.0.12
+    username: user
+    password: pass
+    role: dist
+  - hostname: j1
+    platform: junos
+    mgmt_ip: 10.0.0.21
+    username: user
+    password: pass
+    role: core
+  - hostname: jump
+    platform: linux
+    mgmt_ip: 10.0.0.5
+    username: user
+    password: pass
+    role: jump-host

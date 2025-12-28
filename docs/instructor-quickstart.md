@@ -2,8 +2,8 @@
 
 Before class (30-60 min)
 - Verify GNS3 lab is up and reachable.
-- Test one login per vendor using `docs/lab-topology.md`.
-- Update `docs/lab-topology.md` with any changes.
+- Test one login per vendor using `docs/lab-topology.yml`.
+- Update `docs/lab-topology.yml` with any changes.
 - Run `python3 scripts/generate_inventory.py` to refresh Day 1 inventory data.
 - Run `./scripts/verify.sh` to confirm repo health.
 - (Day 4) Preinstall Ansible collections: `cisco.ios`, `junipernetworks.junos`, `arista.eos`.

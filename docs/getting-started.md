@@ -11,11 +11,20 @@ Live lab required
 - Minimum checks: ping one device and confirm you can see SNMP or syslog traffic on the collector.
   - Example: `sudo tcpdump -i <iface> port 161 or port 514`
 
+Credential handling
+- Keep real credentials out of version control. Treat `docs/lab-topology.yml` as local-only.
+- If you must share the repo, replace usernames/passwords with placeholders first.
+- Prefer environment variables or a password manager for long-lived secrets.
+
 Setup
 1. From the repo root, run `./scripts/bootstrap.sh`.
 2. Run `./scripts/sync_modules.sh` to pull optional lab modules.
-3. Open `docs/lab-topology.md` and confirm device access details.
-4. Start Day 1 in `labs/day-01-foundations/README.md`.
+3. Run `./scripts/sanity_check.sh`.
+4. Open `docs/lab-topology.yml` and confirm device access details (then regenerate `docs/lab-topology.md`).
+5. Start Day 1 in `labs/day-01-foundations/README.md`.
+
+Course-wide practices
+- Read `docs/lab-practices.md` before starting Day 1.
 
 Tip
 - If you already have an `autocon4-lab` hub in `/home/gns3/Documents`, the sync script will link to those modules instead of cloning.

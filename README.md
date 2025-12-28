@@ -11,6 +11,9 @@ What you'll learn
 - Capture and analyze live traffic to verify behavior.
 - Automate multi-vendor changes with Ansible.
 - Express intent and review plan/apply evidence.
+- Handle credentials safely and capture evidence for review.
+- Choose concurrency models for I/O-heavy tasks.
+- Plan safe changes with pre-checks and rollback.
 
 Course map
 - Day 0: setup and lab access
@@ -24,10 +27,11 @@ Quick start
 1. Run `./scripts/bootstrap.sh`.
 2. Run `./scripts/verify.sh`.
 3. Read `docs/getting-started.md`.
-4. Start Day 1 in `labs/day-01-foundations/README.md`.
+4. Read `docs/lab-practices.md`.
+5. Start Day 1 in `labs/day-01-foundations/README.md`.
 
 Lab integration
-- `docs/lab-topology.md` is the source of truth.
+- `docs/lab-topology.yml` is the source of truth (generates `docs/lab-topology.md`).
 - After updating topology, run `python3 scripts/generate_inventory.py`.
 - Optional lab modules live under `modules/` (use `./scripts/sync_modules.sh`).
 

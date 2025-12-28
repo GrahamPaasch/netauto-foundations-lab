@@ -1,5 +1,7 @@
 # Lab Topology
 
+This file is generated from `docs/lab-topology.yml`. Edit that file and re-run `python3 scripts/generate_inventory.py`.
+
 This course expects a small multi-vendor lab with a jump host.
 
 If you synced modules, look here for topology assets:
@@ -13,5 +15,6 @@ Fill in the table below for quick reference.
 | r1 | ios | 10.0.0.11 | user | pass | edge |
 | sw1 | eos | 10.0.0.12 | user | pass | dist |
 | j1 | junos | 10.0.0.21 | user | pass | core |
+| jump | linux | 10.0.0.5 | user | pass | jump-host |
 
-After updating this table, run `python3 scripts/generate_inventory.py` to refresh Day 1 inventory data.
+After updating the source of truth, run `python3 scripts/generate_inventory.py` to refresh generated files.
