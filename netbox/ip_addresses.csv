@@ -1,0 +1,10 @@
+address,status,dns_name,description
+10.0.0.100/32,active,_gateway,gateway (Linux 4.15 - 5.8)
+10.0.10.89/32,active,WAN-ACCESS-02.techyes.local,WAN-ACCESS-02
+10.0.14.166/32,active,INT-DIST-01.techyes.local,INT-DIST-01
+10.0.24.128/32,active,TECHYES-CORE-01.techyes.local,"TECHYES-CORE-01 (Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2))"
+10.0.128.117/32,active,OOB-ADMIN.techyes.local,OOB-ADMIN (Linux 2.6.32)
+10.0.139.119/32,active,TECHYES-CORE-02.techyes.local,"TECHYES-CORE-02 (Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2))"
+10.0.162.74/32,active,DATA-LS-01.techyes.local,"DATA-LS-01 (Cisco 836, 890, 1751, 1841, 2800, or 2900 router (IOS 12.4 - 15.1))"
+10.0.244.64/32,active,INT-ACCESS-02.techyes.local,INT-ACCESS-02
+10.0.252.116/32,active,,"host-10-0-252-116 (Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2))"
