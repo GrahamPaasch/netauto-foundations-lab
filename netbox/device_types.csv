@@ -3,3 +3,4 @@ Cisco,Cisco IOS Device,cisco-cisco-ios-device
 Generic,Linux Host,generic-linux-host
 Generic,Unknown Device,generic-unknown-device
 Juniper,Juniper Generic,juniper-juniper-generic
+Juniper,vMX,juniper-vmx

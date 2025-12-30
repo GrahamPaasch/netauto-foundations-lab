@@ -1,0 +1,3 @@
+Entering configuration mode
+commit complete
+Exiting configuration mode

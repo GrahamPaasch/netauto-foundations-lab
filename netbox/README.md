@@ -15,6 +15,10 @@ Import order (recommended):
 Notes:
 - IP addresses are imported unassigned. Assign them to interfaces later in NetBox.
 - Device roles/types/platforms are best-effort based on OS guesses and hostnames.
+- Junos enrichment adds `serial` and augments device comments with model/Junos/LLDP chassis ID.
 - Rerun with a different site or prefix:
   python3 scripts/nmap_to_netbox.py --xml /path/to/scan.xml --out netbox --site YOUR-SITE --prefix 10.0.0.0/16
   python3 scripts/nmap_to_netbox.py --md docs/nmap-inventory.md --out netbox --site YOUR-SITE --prefix 10.0.0.0/16
+
+Enrichment (Junos evidence logs):
+  python3 scripts/enrich_netbox_from_junos.py --evidence evidence/logs --netbox netbox

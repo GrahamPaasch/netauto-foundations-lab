@@ -1,0 +1,2 @@
+
+error: invalid interface type in 'all': all

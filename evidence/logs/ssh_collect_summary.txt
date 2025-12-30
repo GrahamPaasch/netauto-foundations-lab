@@ -1,0 +1,12 @@
+10.0.0.100 os=unknown
+10.0.10.89 os=unknown
+10.0.14.163 os=unknown
+10.0.14.166 os=unknown
+10.0.24.128 os=junos
+10.0.28.191 os=unknown
+10.0.139.119 os=junos
+10.0.162.74 os=unknown
+10.0.210.199 os=unknown
+10.0.244.64 os=unknown
+10.0.252.114 os=unknown
+10.0.252.116 os=unknown

@@ -1,0 +1,2 @@
+Interface    Parent Interface  Received  Unknown TLVs  With Errors  Discarded TLVs  Transmitted  Untransmitted
+fxp0         -                 198       0             0            0               104          0         

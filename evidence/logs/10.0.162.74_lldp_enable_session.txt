@@ -1,0 +1,146 @@
+LLDP enable session
+ERROR: End Of File (EOF). Exception style platform.
+<pexpect.pty_spawn.spawn object at 0x770a951c5130>
+command: /usr/bin/telnet
+args: [b'/usr/bin/telnet', b'10.0.162.74']
+buffer (last 100 chars): ''
+before (last 100 chars): 'configure terminal\r\n'
+after: <class 'pexpect.exceptions.EOF'>
+match: None
+match_index: None
+exitstatus: 1
+flag_eof: True
+pid: 67003
+child_fd: 5
+closed: False
+timeout: 10
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('[#>]')
+
+SHOW OUTPUTS
+
+## show lldp
+ERROR: End Of File (EOF). Exception style platform.
+<pexpect.pty_spawn.spawn object at 0x770a951c5130>
+command: /usr/bin/telnet
+args: [b'/usr/bin/telnet', b'10.0.162.74']
+buffer (last 100 chars): ''
+before (last 100 chars): 'show lldp\r\n'
+after: <class 'pexpect.exceptions.EOF'>
+match: None
+match_index: None
+exitstatus: 1
+flag_eof: True
+pid: 67003
+child_fd: 5
+closed: False
+timeout: 10
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('[#>]')
+
+## show lldp neighbors
+ERROR: End Of File (EOF). Exception style platform.
+<pexpect.pty_spawn.spawn object at 0x770a951c5130>
+command: /usr/bin/telnet
+args: [b'/usr/bin/telnet', b'10.0.162.74']
+buffer (last 100 chars): ''
+before (last 100 chars): 'show lldp neighbors\r\n'
+after: <class 'pexpect.exceptions.EOF'>
+match: None
+match_index: None
+exitstatus: 1
+flag_eof: True
+pid: 67003
+child_fd: 5
+closed: False
+timeout: 10
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('[#>]')
+
+## show lldp neighbors detail
+ERROR: End Of File (EOF). Exception style platform.
+<pexpect.pty_spawn.spawn object at 0x770a951c5130>
+command: /usr/bin/telnet
+args: [b'/usr/bin/telnet', b'10.0.162.74']
+buffer (last 100 chars): ''
+before (last 100 chars): 'show lldp neighbors detail\r\n'
+after: <class 'pexpect.exceptions.EOF'>
+match: None
+match_index: None
+exitstatus: 1
+flag_eof: True
+pid: 67003
+child_fd: 5
+closed: False
+timeout: 10
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('[#>]')
+
+## show version | include Version|IOS|Cisco
+ERROR: End Of File (EOF). Exception style platform.
+<pexpect.pty_spawn.spawn object at 0x770a951c5130>
+command: /usr/bin/telnet
+args: [b'/usr/bin/telnet', b'10.0.162.74']
+buffer (last 100 chars): ''
+before (last 100 chars): 'show version | include Version|IOS|Cisco\r\n'
+after: <class 'pexpect.exceptions.EOF'>
+match: None
+match_index: None
+exitstatus: 1
+flag_eof: True
+pid: 67003
+child_fd: 5
+closed: False
+timeout: 10
+delimiter: <class 'pexpect.exceptions.EOF'>
+logfile: None
+logfile_read: None
+logfile_send: None
+maxread: 2000
+ignorecase: False
+searchwindowsize: None
+delaybeforesend: 0.05
+delayafterclose: 0.1
+delayafterterminate: 0.1
+searcher: searcher_re:
+    0: re.compile('[#>]')

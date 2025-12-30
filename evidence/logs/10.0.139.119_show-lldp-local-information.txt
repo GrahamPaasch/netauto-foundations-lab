@@ -1,0 +1,17 @@
+
+LLDP Local Information details
+
+Chassis ID   : 2c:6b:f5:7b:a4:c0
+System name  : TECHYES-CORE-02
+System descr : Juniper Networks, Inc. vmx internet router, kernel JUNOS 17.4R1.16, Build date: 2017-12-19 21:39:49 UTC Copyright (c) 1996-2017 Juniper Networks, Inc.
+
+System Capabilities
+    Supported       : Bridge Router 
+    Enabled         : Bridge Router 
+
+Management Information
+    Interface Name  : fxp0
+    Address Subtype : IPv4(1)
+    Address         : 10.0.139.119
+    Interface Number               : 1
+    Interface Numbering Subtype    : ifIndex(2)

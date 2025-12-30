@@ -1,10 +1,10 @@
-name,device_role,device_type,site,status,platform,comments
-gateway,Gateway,Linux Host,techyes-lab,active,linux,nmap_os_guess=Linux 4.15 - 5.8; mac=0A:8B:E9:DA:DE:9D; open_tcp_ports=1
-WAN-ACCESS-02,WAN,Unknown Device,techyes-lab,active,unknown,mac=0C:0C:D4:E2:00:03; open_tcp_ports=0
-INT-DIST-01,Distribution,Unknown Device,techyes-lab,active,unknown,mac=0C:96:32:3A:00:0F; open_tcp_ports=0
-TECHYES-CORE-01,Core,Juniper Generic,techyes-lab,active,junos,"nmap_os_guess=Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2); mac=0C:0E:F4:5B:00:00; open_tcp_ports=7"
-OOB-ADMIN,OOB,Linux Host,techyes-lab,active,linux,nmap_os_guess=Linux 2.6.32; open_tcp_ports=8
-TECHYES-CORE-02,Core,Juniper Generic,techyes-lab,active,junos,"nmap_os_guess=Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2); mac=0C:81:B0:FA:00:00; open_tcp_ports=5"
-DATA-LS-01,Access,Cisco IOS Device,techyes-lab,active,ios,"nmap_os_guess=Cisco 836, 890, 1751, 1841, 2800, or 2900 router (IOS 12.4 - 15.1); mac=0C:D6:B7:B4:00:00; open_tcp_ports=1"
-INT-ACCESS-02,Access,Unknown Device,techyes-lab,active,unknown,mac=0C:DD:FF:9E:00:03; open_tcp_ports=0
-host-10-0-252-116,Unknown,Juniper Generic,techyes-lab,active,junos,"nmap_os_guess=Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2); mac=0C:66:91:BE:00:00; open_tcp_ports=3"
+name,device_role,device_type,site,status,platform,comments,serial
+gateway,Gateway,Linux Host,techyes-lab,active,linux,nmap_os_guess=Linux 4.15 - 5.8; mac=0A:8B:E9:DA:DE:9D; open_tcp_ports=1,
+WAN-ACCESS-02,WAN,Unknown Device,techyes-lab,active,unknown,mac=0C:0C:D4:E2:00:03; open_tcp_ports=0,
+INT-DIST-01,Distribution,Unknown Device,techyes-lab,active,unknown,mac=0C:96:32:3A:00:0F; open_tcp_ports=0,
+TECHYES-CORE-01,Core,vMX,techyes-lab,active,junos,"nmap_os_guess=Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2); mac=0C:0E:F4:5B:00:00; open_tcp_ports=7; model=vmx; junos=17.4R1.16; lldp_chassis_id=2c:6b:f5:02:60:c0",VM65241CCE37
+OOB-ADMIN,OOB,Linux Host,techyes-lab,active,linux,nmap_os_guess=Linux 2.6.32; open_tcp_ports=8,
+TECHYES-CORE-02,Core,vMX,techyes-lab,active,junos,"nmap_os_guess=Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2); mac=0C:81:B0:FA:00:00; open_tcp_ports=5; model=vmx; junos=17.4R1.16; lldp_chassis_id=2c:6b:f5:7b:a4:c0",VM65241CCD3D
+DATA-LS-01,Access,Cisco IOS Device,techyes-lab,active,ios,"nmap_os_guess=Cisco 836, 890, 1751, 1841, 2800, or 2900 router (IOS 12.4 - 15.1); mac=0C:D6:B7:B4:00:00; open_tcp_ports=1",
+INT-ACCESS-02,Access,Unknown Device,techyes-lab,active,unknown,mac=0C:DD:FF:9E:00:03; open_tcp_ports=0,
+host-10-0-252-116,Unknown,Juniper Generic,techyes-lab,active,junos,"nmap_os_guess=Juniper Networks J2320 or MX5-T router; or EX2200, EX3200, EX4200, or EX8200 switch (JUNOS 8.5 - 11.2); mac=0C:66:91:BE:00:00; open_tcp_ports=3",
